@@ -16,10 +16,7 @@ program
     "The action you want to perform",
     /^(upload|download)$/i
   )
-  .option(
-    "-f --file <file>",
-    "The filename want to upload or download"
-  )
+  .option("-f --file <file>", "The filename want to upload or download")
   .option(
     "-f3 --folder <folder>",
     "The name of the folder you want to upload or download"
@@ -98,8 +95,8 @@ switch (options.service) {
       } else if (options.folder) {
         azureDownload(options.folder, options.folder, true);
       }
+      break;
     }
-    break;
   case "google":
     if (options.action === "upload") {
       const googleUpload = require("./googleUpload");
@@ -111,9 +108,9 @@ switch (options.service) {
     } else if (options.action === "download") {
       const googleDownload = require("./googleDownload");
       if (options.file) {
-        googleDownload(options.file);
+        googleDownload(options.file, options.folder, options.bucket);
       } else if (options.folder) {
-        googleDownload(options.folder, options.folder, true);
+        googleDownload(options.folder, options.folder, options.bucket, true);
       }
     }
     break;

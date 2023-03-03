@@ -16,6 +16,7 @@
   "author": "Devin Earl",
   "license": "ISC",
   "dependencies": {
+    "aws": "^0.0.3-2",
     "aws-sdk": "^2.1327.0",
     "awssdk": "^1.0.1",
     "commander": "^10.0.0",
