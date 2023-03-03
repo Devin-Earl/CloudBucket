@@ -14,12 +14,10 @@ GitHub: [Devin-Earl](https://github.com/Devin-Earl)
 
 ## Installation
 
-1.  Clone or download the repository
-2.  Install dependencies by running `npm install` in the project directory
+1. Clone or download the repository
+2. Install dependencies by running `npm install` in the project directory
 
 ## Usage
-
-shCopy code
 
 `node index.js -s <service> -a <action> -f <file> [-f3 <folder>]`
 
@@ -34,10 +32,8 @@ shCopy code
 
 To upload a file to an AWS S3 bucket, run:
 
-shCopy code
-
 `node index.js -s aws -a upload -f path/to/file.txt`
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://chat.openai.com/chat/LICENSE) file for details.
+This project is licensed under the MIT License.
