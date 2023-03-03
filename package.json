@@ -16,6 +16,12 @@
   "author": "Devin Earl",
   "license": "ISC",
   "dependencies": {
-    "commander": "^10.0.0"
+    "aws-sdk": "^2.1327.0",
+    "awssdk": "^1.0.1",
+    "commander": "^10.0.0",
+    "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "prompt-sync": "^4.2.0"
   }
 }
