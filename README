@@ -19,7 +19,7 @@ GitHub: [Devin-Earl](https://github.com/Devin-Earl)
 
 ## Usage
 
-`shCopy code`
+'shCopy code'
 
 `node index.js -s <service> -a <action> -f <file> [-f3 <folder>]`
 
@@ -34,7 +34,7 @@ GitHub: [Devin-Earl](https://github.com/Devin-Earl)
 
 To upload a file to an AWS S3 bucket, run:
 
-`shCopy code`
+'shCopy code'
 
 `node index.js -s aws -a upload -f path/to/file.txt`
 
