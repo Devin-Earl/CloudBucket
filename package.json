@@ -1,5 +1,5 @@
 {
-  "name": "cloud-bucket",
+  "name": "cloud-bucket-cli",
   "version": "1.0.0",
   "description": "A simple S3 toolkit that allows you to upload/download files and folders to S3",
   "main": "index.js",
