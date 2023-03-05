@@ -1,4 +1,4 @@
-# S3 Tools
+# CloudBucket
 
 This program is intended to make it easy to interact with S3 buckets regardless of service used.
 
