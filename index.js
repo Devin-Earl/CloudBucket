@@ -16,10 +16,7 @@ program
     "The action you want to perform",
     /^(upload|download)$/i
   )
-  .option(
-    "-f --file <file>",
-    "The filename want to upload or download"
-  )
+  .option("-f --file <file>", "The filename want to upload or download")
   .option(
     "-f3 --folder <folder>",
     "The name of the folder you want to upload or download"
