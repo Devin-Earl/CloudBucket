@@ -1,14 +1,14 @@
-require('dotenv').config();
-const AWS = require('aws-sdk');
-const fs = require('fs');
-const path = require('path');
+require("dotenv").config();
+const AWS = require("aws-sdk");
+const fs = require("fs");
+const path = require("path");
 
 const s3 = new AWS.S3({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 });
 
-const outputDir = './output';
+const outputDir = "./output";
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
 }
@@ -41,7 +41,7 @@ async function downloadS3Folder(bucket, prefix) {
     const keys = response.Contents.map((obj) => obj.Key);
 
     for (const key of keys) {
-      const outputFileName = key.split('/').pop();
+      const outputFileName = key.split("/").pop();
       const outputFilePath = path.join(outputDir, outputFileName);
       await downloadS3File(bucket, key, outputFileName);
     }
@@ -61,7 +61,7 @@ async function downloadS3Bucket(bucket) {
     const keys = response.Contents.map((obj) => obj.Key);
 
     for (const key of keys) {
-      const outputFileName = key.split('/').pop();
+      const outputFileName = key.split("/").pop();
       const outputFilePath = path.join(outputDir, outputFileName);
       await downloadS3File(bucket, key, outputFileName);
     }
@@ -73,17 +73,18 @@ async function downloadS3Bucket(bucket) {
 
 async function awsDownload(program) {
   try {
-    const bucket = program.bucket || (await ask('Please enter the S3 bucket name: '));
-    const type = program.file ? 'file' : program.folder ? 'folder' : 'bucket';
+    const bucket =
+      program.bucket || (await ask("Please enter the S3 bucket name: "));
+    const type = program.file ? "file" : program.folder ? "folder" : "bucket";
 
     switch (type) {
-      case 'file': {
+      case "file": {
         const key = program.file;
         const outputFileName = path.basename(key);
         await downloadS3File(bucket, key, outputFileName);
         break;
       }
-      case 'folder': {
+      case "folder": {
         const prefix = program.folder;
         await downloadS3Folder(bucket, prefix);
         break;
@@ -99,7 +100,7 @@ async function awsDownload(program) {
 
 function ask(question) {
   return new Promise((resolve, reject) => {
-    const readline = require('readline').createInterface({
+    const readline = require("readline").createInterface({
       input: process.stdin,
       output: process.stdout,
     });
