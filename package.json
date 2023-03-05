@@ -1,5 +1,5 @@
 {
-  "name": "CloudBucket,
+  "name": "cloud-bucket",
   "version": "1.0.0",
   "description": "A simple S3 toolkit that allows you to upload/download files and folders to S3",
   "main": "index.js",
@@ -7,6 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "AWS",
+    "Azure",
+    "CLI",
+    "tools",
+    "S3",
     "cloud storage",
     "file management",
     "data transfer",
@@ -16,12 +21,7 @@
     "file download",
     "command line interface",
     "Node.js",
-    "JavaScript",
-    "serverless",
-    "Amazon Web Services",
-    "Microsoft Azure",
-    "Google Cloud Platform",
-    "data backup"
+    "JavaScript"
   ],
   "author": "Devin Earl",
   "license": "ISC",
@@ -30,12 +30,11 @@
     "@azure/storage-blob": "^12.13.0",
     "@google-cloud/storage": "^6.9.4",
     "aws-sdk": "^2.1327.0",
-    "awssdk": "^1.0.1",
-    "commander": "^10.0.0",
-    "dotenv": "^16.0.3",
-    "fs": "^0.0.1-security",
+    "commander": "^8.1.0",
+    "dotenv": "^10.0.0",
+    "fs": "^0.0.2",
     "path": "^0.12.7",
     "prompt-sync": "^4.2.0",
-    "uuid": "^9.0.0"
+    "uuid": "^8.3.2"
   }
 }
